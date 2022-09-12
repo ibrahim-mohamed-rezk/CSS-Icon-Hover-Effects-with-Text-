@@ -1,0 +1,51 @@
+body{
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    background: linear-gradient(#80ff72, #7ee8fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 60px;
+    transition: .5s all;
+
+}
+
+.container:hover{
+    width: 250px;
+}
+
+.container svg{
+    width: 50px;
+    color: #fff;
+}
+
+.container:hover svg{
+    display: none;
+}
+
+.container::after{
+    content: "Home";
+    display: none;
+    color: #fff;
+    transition: .5s all;
+}
+
+.container:hover::after{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 35px;
+    line-height: 1;
+    letter-spacing: 2px;
+}
